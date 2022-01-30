@@ -1,0 +1,8 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman';
+}
+table, th, td {
+    border: 1px solid black;
+    /* width: 100%; */
+}
