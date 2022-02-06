@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        
+
+    </head>
+    <body>
+        <div id="app">
+            <div class="biodata">
+                
+                <hr>
+                
+                <h4>{{ name }}</h4>
+                Nama Siswa: <input type= "text" v-model:value="namaSiswa"></br>
+            
+                Umur Siswa: <input type= "text" v-model:value="umurSiswa"> tahun</br>
+        
+                Nama Orang Tua: <input type= "text" v-model:value="ortu"></br>
+                
+                Tingkatan: 
+                <select v-model:value="tingkatan">
+                    <option>SD</option>
+                    <option>SMP</option>
+                    <option>SMA</option>
+                </select>
+                Kelas: <input type="number" v-model:value="kelas">
+                Nama Wali Kelas: <input type= "text" v-model:value="walas">
+                Jurusan: <input type="text" v-model:value="jurusan">
+            </div>
+            <hr>
+            <label><input type="checkbox"
+            v-model:value="dataSiswa"> Tampilkan Data</label>
+            <div class="detail" v-if="dataSiswa">
+                <p>Nama Saya {{ namaSiswa }} , umur Saya {{ umurSiswa }} , dan nama orang tua saya {{ ortu }} . Saya masih {{ tingkatan }}</p>
+                
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+
+</html>

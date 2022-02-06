@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        
+
+    </head>
+    <!-- <body>
+        <div id="app">
+            {{message}}
+        </div> -->
+        
+ 
+        <!-- <div id="app">
+            <input type="text" v-bind:value="message">
+            <p>{{message}}</p>
+            
+        </div> -->
+
+        <!-- <div id="app">
+            <input type="text" v-model:value="message">
+            <p>{{message}}</p>
+            
+        </div> -->
+
+        <!-- <div id="app">
+            <input type="url" v-model:value="url" placeholder="Link gambar"/></br>
+            <input type="text" v-model:value="caption.text" placeholder="Caption untuk image">
+            <br>
+            <select v-model:value="caption.attr">
+                <option>tittle</option>
+                <option>alt</option>
+            </select>
+        </div>
+
+        <div>
+            <img v-bind:src="url" v-bind:[caption.attr]="caption.text"/>
+            <p>Caption diberikan pada atribut
+                <code>{{ caption.attr }}</code> dengan isi "{{caption.text}}" </p>
+        </div> -->
+
+        <!-- <div id="app">
+            <fieldset>
+                <legend>Buat artikel</legend>
+                <p><input type="text" v-model:value="title"
+                    placeholder="judul artikel" /></p>
+                    <p><textarea v-model:value="content">
+
+                    </textarea></p>
+            </fieldset>
+
+            <div class="preview">
+                <h1 v-text="title"></h1>
+                <hr>
+                <div v-html="content"></div>
+                <hr>
+                <div v-text="content"></div>
+                <hr>
+                <p>yang ini cuma render sekali:</p>
+                <div v-once>{{content}}</div>
+            </p>
+
+            </div> -->
+
+            <div id="app">
+                <div class="biodata">
+                    <!-- <p>Ini adalah detail dari pesanan anda:</p> -->
+                    <hr>
+                    <!-- <img :src="cover" width="100"/> -->
+                    <h4>{{ name }}</h4>
+                    Nama Siswa: <input type= "text" v-model:value="namaSiswa"></br>
+                
+                    Umur Siswa: <input type= "text" v-model:value="umurSiswa"> tahun</br>
+            
+                    Nama Orang Tua: <input type= "text" v-model:value="ortu"></br>
+                    
+                    Tingkatan: 
+                    <select v-model:value="tingkatan">
+                        <option>SD</option>
+                        <option>SMP</option>
+                        <option>SMA</option>
+                    </select>
+                    Kelas: <input type="number" v-model:value="kelas">
+                    Nama Wali Kelas: <input type= "text" v-model:value="walas">
+                    Jurusan: <input type="text" v-model:value="jurusan">
+                </div>
+                <hr>
+                <label><input type="checkbox"
+                v-model:value="dataSiswa"> Tampilkan Data</label>
+                <div class="detail" v-if="dataSiswa">
+                    <p>Nama Saya {{ namaSiswa }} , umur Saya {{ umurSiswa }} , dan nama orang tua saya {{ ortu }} . Saya masih {{ tingkatan }}</p>
+                    
+                </div>
+            </div>
+
+            <!-- <div id="app">
+                <div class="order-detail">
+                    <p>Ini adalah detail dari pesanan anda:</p>
+                    <hr>
+                    <img :src="cover" width="100"/>
+                    <h4>{{ name }}</h4>
+                    Qty: <input type="number" v-model:value="qty"
+                    min = "1" max = "10"/>
+                    Total: Rp {{ price * qty }}
+                </div>
+                <hr>
+                <label><input type="checkbox"
+                v-model:value="showBonus"></label>
+                <div class="detail" v-if="showBonus">
+                    <p v-if="qty >= 10">Maaf Kamu hanya beli {{ qty }} aja yah.. soalnya kita nggak punya banyak stok</p>
+                    <p v-else-if="qty >= 5">Whoaa tukang borong nih!</p>
+                    <p v-else-if="qty >= 2">Selamat kam dapat bonus, karena membeli {{ qty }} buku!</p>
+                    <p v-else>Beli lebih banyak lagi untuk dapat bonus</p>
+                </div>
+            </div> -->
+            <!-- <div id="app">
+                <h2>Daftar Pekerjaan</h2>
+                <input type="text" placeholder="tambah pekerjaan"
+                v-model:value="newTask" />
+                <button @click="addTask">Add</button>
+                <ul>
+                    <li v-for="item in todolists">
+                        <s v-if="item.done">{{ item.task }}</s>
+                        <b v-else>{{ item.task }}</b>
+                    </li>
+                </ul>
+            </div> -->
+
+            <!-- <div id="app">
+                <input type="text" v-model:value="name"/>
+                <button @click="btnClick" @mouseover="hover = true" @mouseout= "hover = false">Klik Saya</button>
+                <p v-if="hover">Kamu sedang menyentuh tombolnya</p>
+            </div>
+             -->
+
+        
+        <script src="index.js"></script>
+    </body>
+</html>
